@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Express Application</h1>
+    <h2></h2>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem,
+      deleniti earum, debitis ducimus molestias alias ratione labore esse
+      necessitatibus illo veniam? Explicabo nemo aut saepe sapiente tenetur
+      expedita, enim ipsa.
+    </p>
+
+    <form action="/login" method="post">
+      <label for="email">Email <input type="ema4" name="email" /></label>
+      <label for="pwd">pwd <input type="password" name="password"/></label>
+      <button>Login</button>
+    </form>
+
+    <script>
+      fetch("/student")
+        .then((res) => res.json())
+        .then((user) => {
+          document.querySelector("h2").innerText = "Hi " + user.name;
+        });
+    </script>
+  </body>
+</html>
